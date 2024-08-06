@@ -25,20 +25,20 @@ public class assignOrdersTestController {
     ShippingAdressRepository shippingAddressRepository;
     @GetMapping("/assignorder")
     public void assignOrderToDispatchRider() throws MessagingException {
-        ShippingAddress shippingAddress = new ShippingAddress();
-        shippingAddress.setEmail("jummyhanna@gmail.com");
-        shippingAddress.setFirstName("olawale");
-        shippingAddress.setLastName("deji");
-        shippingAddress.setPhoneNumber("080263095");
-        shippingAddress.setCityName("ikorodu");
-        shippingAddress.setRegionName("A");
-        shippingAddress.setHomeAdddress("10 adebowale street");
-        shippingAddressRepository.save(shippingAddress);
-        CustomerOrder customerOrder = new CustomerOrder();
-        customerOrder.setShippingAddress(shippingAddress);
-        customerOrder.setDeliveryDate(new Date());
-        customerOrderRepository.save(customerOrder);
-        assignOrderToDispatchRider.assignOrderToDispatchRider(customerOrder);
-        System.out.println(shippingAddress.toString());
+//        ShippingAddress shippingAddress = new ShippingAddress();
+//        shippingAddress.setEmail("jummyhanna@gmail.com");
+//        shippingAddress.setFirstName("olawale");
+//        shippingAddress.setLastName("deji");
+//        shippingAddress.setPhoneNumber("080263095");
+//        shippingAddress.setCityName("ikorodu");
+//        shippingAddress.setRegionName("A");
+//        shippingAddress.setHomeAddress("10 adebowale street");
+//        shippingAddressRepository.save(shippingAddress);
+//        CustomerOrder customerOrder = new CustomerOrder();
+//        customerOrder.setShippingAddress(shippingAddress);
+//        customerOrder.setDeliveryDate(new Date());
+//        customerOrderRepository.save(customerOrder);
+//        assignOrderToDispatchRider.assignOrderToDispatchRider(customerOrder);
+        System.out.println("testing..........................");
     }
 }
