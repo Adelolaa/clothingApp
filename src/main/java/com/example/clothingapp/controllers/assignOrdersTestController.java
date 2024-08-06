@@ -1,8 +1,4 @@
 package com.example.clothingapp.controllers;
-
-
-import com.example.clothingapp.models.CustomerOrder;
-import com.example.clothingapp.models.ShippingAddress;
 import com.example.clothingapp.repositories.CustomerOrderRepository;
 import com.example.clothingapp.repositories.ShippingAdressRepository;
 import com.example.clothingapp.services.servicesImpl.AssignOrderToDispatchRider;
@@ -13,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import javax.mail.MessagingException;
-import java.util.Date;
+
 
 @RestController
 public class assignOrdersTestController {
