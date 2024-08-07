@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Transactional
 @Repository
-public interface CartIemRepository extends JpaRepository<CartItem, Long> {
+public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 Optional<CartItem> findCartItemByCartAndProduct(Cart cart, Product product);
  void deleteByCart_Id(Long id);
 }
