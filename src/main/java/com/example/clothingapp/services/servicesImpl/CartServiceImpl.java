@@ -6,7 +6,7 @@ import com.example.clothingapp.models.Cart;
 import com.example.clothingapp.models.CartItem;
 import com.example.clothingapp.models.Product;
 import com.example.clothingapp.models.User;
-import com.example.clothingapp.repositories.CartIemRepository;
+import com.example.clothingapp.repositories.CartItemRepository;
 import com.example.clothingapp.repositories.CartRepository;
 import com.example.clothingapp.repositories.ProductRepository;
 import com.example.clothingapp.repositories.UserRepository;
@@ -21,7 +21,7 @@ import java.util.Optional;
 @Service
 public class CartServiceImpl implements CartService {
     @Autowired
-   private CartIemRepository cartIemRepository;
+   private CartItemRepository cartItemRepository;
     @Autowired
   private CartRepository cartRepository;
     @Autowired
@@ -49,20 +49,20 @@ public class CartServiceImpl implements CartService {
             cartItem.setQuantity(1);
             cartItem.setProduct(product);
             cartItem.setCart(cart);
-            cartIemRepository.save(cartItem);
+            cartItemRepository.save(cartItem);
             List<CartItem> cartItemList = new ArrayList<>() {{add(cartItem);}};
             cart.setCartItemList(cartItemList);
             cartRepository.save(cart);
         } else {
             Cart cart = optionalCart.get();
-            Optional<CartItem> optionalCartItem = cartIemRepository.findCartItemByCartAndProduct(cart, product);
+            Optional<CartItem> optionalCartItem = cartItemRepository.findCartItemByCartAndProduct(cart, product);
             if (optionalCartItem.isEmpty()) {
                 CartItem newCartItem = new CartItem();
                 newCartItem.setCart(cart);
                 newCartItem.setPrice(product.getPrice());
                 newCartItem.setQuantity(1);
                 newCartItem.setProduct(product);
-                cartIemRepository.save(newCartItem);
+                cartItemRepository.save(newCartItem);
                 List<CartItem> cartItemList = new ArrayList<>() {{
                     add(newCartItem);
                 }};

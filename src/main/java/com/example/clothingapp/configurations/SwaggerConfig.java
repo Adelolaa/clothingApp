@@ -14,7 +14,6 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -83,7 +82,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                         "<article>.<br/>",
                 "1.0",
                 "Free to use",
-                new springfox.documentation.service.Contact("Adelola Alesh", "https://github.com/adelolaa/clothing_webstore", "yahg.concept@gmail.com"),
+                new springfox.documentation.service.Contact("Adelola Alesh", "https://github.com/adelolaa/clothing_webstore", "adelola.alesh@gmail.com"),
                 "API License",
                 "https://github.com/adelolaa",
                 Collections.emptyList());
